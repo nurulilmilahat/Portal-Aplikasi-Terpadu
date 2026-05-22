@@ -3,24 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selamat Datang</title>
+    <title>Portal Aplikasi - Ponpes Nurul Ilmi Lahat</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Import Google Font 'Inter' for a modern look */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e0f2fe 100%); /* Ice blue background */
+            min-height: 100vh;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3);
+        }
+
+        .bg-primary-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%);
+        }
+        
+        .glass-card {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 10px 40px -10px rgba(31, 38, 135, 0.08);
+        }
+
+        .bg-blue-logo {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
         }
     </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="text-center p-8 bg-white rounded-lg shadow-xl transform transition-all hover:scale-105 duration-300">
-        <h1 class="text-5xl font-bold text-blue-600 mb-4 tracking-wide">
-            SELAMAT DATANG
-        </h1>
-        <p class="text-gray-600 text-lg">
-            Terima kasih telah berkunjung.
+<body class="antialiased text-gray-800 flex flex-col min-h-screen relative overflow-x-hidden">
+    
+    <!-- Header -->
+    <header class="relative z-10 w-full max-w-6xl mx-auto px-4 py-12 text-center flex flex-col items-center">
+        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md border border-blue-100 mb-6 text-[#1e3a8a]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+            </svg>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-3 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#1e3a8a] to-[#3b82f6]">Portal Aplikasi Terpadu</h1>
+        <p class="text-lg text-slate-800 max-w-2xl mx-auto font-medium text-center">
+            Satu pintu untuk mengakses seluruh layanan sistem informasi<br>Pondok Pesantren Nurul Ilmi Lahat.
         </p>
-    </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10 w-full max-w-6xl mx-auto px-4 pb-12 flex-grow">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Kartu 1: AMALUNA -->
+            <a href="https://amaluna.ponpesnurulilmilahat.com/" target="_blank" class="bg-white rounded-2xl p-6 shadow-xl card-hover flex flex-col justify-center items-center text-center group cursor-pointer h-full">
+                <div class="w-20 h-20 bg-white border border-slate-200 shadow-lg shadow-slate-300/50 text-[#1e3a8a] rounded-2xl flex items-center justify-center mb-4 mx-auto transition-transform duration-300 group-hover:scale-105">
+                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                        <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                        <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                        <path d="M3 14h7v7H3z" fill="currentColor" stroke="none" />
+                    </svg>
+                </div>
+                <div class="text-center relative z-10 flex flex-col">
+                    <h1 class="text-xl font-bold text-[#1e3a8a] mb-1 uppercase tracking-wide">
+                        AMALUNA
+                    </h1>
+                    <p class="text-slate-500 text-sm font-normal">
+                        Platform Manajemen Tugas Terpadu
+                    </p>
+                </div>
+            </a>
+
+            <!-- Kartu 2: PELITA -->
+            <a href="https://pelita.ponpesnurulilmilahat.com/" target="_blank" class="bg-white rounded-2xl p-6 shadow-xl card-hover flex flex-col justify-center items-center text-center group cursor-pointer h-full">
+                <div class="w-20 h-20 bg-white border border-slate-200 shadow-lg shadow-slate-300/50 rounded-2xl flex items-center justify-center mb-4 mx-auto transition-transform duration-300 group-hover:scale-105">
+                    <svg viewBox="0 0 100 100" class="w-11 h-11" fill="none">
+                        <defs>
+                            <linearGradient id="bookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#1e40af" />
+                                <stop offset="100%" stop-color="#3b82f6" />
+                            </linearGradient>
+                            <linearGradient id="lightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#fef08a" />
+                                <stop offset="50%" stop-color="#fbbf24" />
+                                <stop offset="100%" stop-color="#d97706" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M50 8 C 50 30 40 38 18 38 C 40 38 50 46 50 68 C 50 46 60 38 82 38 C 60 38 50 30 50 8 Z" fill="url(#lightGrad)" />
+                        <circle cx="50" cy="38" r="2.5" fill="#ffffff" />
+                        <path d="M15 62 Q 32.5 48 50 68 Q 67.5 48 85 62 V 82 Q 67.5 68 50 88 Q 32.5 68 15 82 Z" fill="url(#bookGrad)" />
+                        <path d="M50 68 V 88" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="text-center relative z-10 flex flex-col">
+                    <h1 class="text-xl font-bold text-[#1e3a8a] mb-1 uppercase tracking-wide">
+                        PELITA
+                    </h1>
+                    <p class="text-slate-500 text-sm font-normal">
+                        Portal E-Layanan Izin Terpadu
+                    </p>
+                </div>
+            </a>
+
+            <!-- Kartu 3: NISE -->
+            <a href="https://nise.ponpesnurulilmilahat.com/" target="_blank" class="bg-white rounded-2xl p-6 shadow-xl card-hover flex flex-col justify-center items-center text-center group cursor-pointer h-full">
+                <div class="w-20 h-20 bg-indigo-600 text-white rounded-2xl flex items-center justify-center shadow-lg mb-4 mx-auto transition-transform duration-300 group-hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                    </svg>
+                </div>
+                <div class="text-center relative z-10 flex flex-col">
+                    <h1 class="text-xl font-bold text-[#1e3a8a] mb-1 uppercase tracking-wide">
+                        NISE
+                    </h1>
+                    <p class="text-slate-500 text-sm font-normal">
+                        Nurul Ilmi Smart Exam
+                    </p>
+                </div>
+            </a>
+
+            <!-- Kartu 4: ISYRAF -->
+            <a href="https://isyraf.ponpesnurulilmilahat.com/" target="_blank" class="bg-white rounded-2xl p-6 shadow-xl card-hover flex flex-col justify-center items-center text-center group cursor-pointer h-full">
+                <div class="w-20 h-20 bg-blue-logo rounded-2xl shadow-lg mb-4 relative z-10 mx-auto transition-transform duration-300 group-hover:scale-105 flex flex-col items-center justify-center text-white overflow-hidden">
+                    <div class="absolute inset-1.5 border-[2px] border-white/20 rounded-full animate-[spin_4s_linear_infinite] border-t-white/90"></div>
+                    <div class="absolute inset-3.5 border-[2px] border-white/10 rounded-full animate-[spin_3s_linear_infinite_reverse] border-b-white/90"></div>
+                    <i class="fas fa-clipboard-check text-3xl relative z-10 drop-shadow-md transition-transform duration-500 group-hover:scale-110 group-hover:text-white"></i>
+                </div>
+                
+                <div class="text-center relative z-10 flex flex-col items-center">
+                    <h1 class="text-xl font-bold text-[#1e3a8a] mb-1 uppercase tracking-wide">
+                        ISYRAF
+                    </h1>
+                    <p class="text-slate-500 text-sm font-normal">
+                        Sistem Monitoring Kegiatan Musyrif
+                    </p>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 text-center text-slate-500 text-sm font-medium">
+        &copy; 2026 Pondok Pesantren Nurul Ilmi Lahat.
+    </footer>
+
 </body>
 </html>
